@@ -3,32 +3,16 @@ import Note from '../Note/Note'
 import './style.scss'
 
 
-let notes = [
-    {
-      id: 1,
-      title: 'Buy Milk',
-      content: 'buy 2L'
-    },
-    {
-      id: 2,
-      title: 'Buy potatoes',
-      content: 'buy 2kg'
-    },
-    {
-      id: 3,
-      title: 'Buy apples',
-      content: 'buy 1.5kg'
-    }
-  ]
 
 
 
-function Notes() {
+
+function Notes({todos}) {
 
 
     
     
-      const [todos, SetTodos] = useState([...notes])
+   
     
 
 

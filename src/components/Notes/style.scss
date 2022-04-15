@@ -1,6 +1,8 @@
 .notes {
    
-
     display: flex;
-    margin: 1em;
+    flex-wrap: wrap;
+    margin: 6em;
+    overflow-y: scroll;
+    justify-content: space-between;
 }
