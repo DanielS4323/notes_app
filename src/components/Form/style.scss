@@ -3,5 +3,32 @@
     top: 13%;
     left: 50%;
     transform: translate(-50%,-13%);
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    input {
+        margin: .5em;
+        padding: .5em;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+
+
+        &::placeholder{
+            padding: .3em;
+            font-size: 18px;
+            text-align: left;
+            letter-spacing: .5px;
+        }
+    }
+    button {
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        padding: .4em .3em;
+        width: 7em;
+        
+    }
+
 }
