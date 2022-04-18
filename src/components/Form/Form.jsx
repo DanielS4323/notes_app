@@ -15,19 +15,24 @@ function Form({SetTitle, title, content, SetContent, todos, SetTodos}) {
             let newNote = {
                 id: todos.length + 1,
                 title: t,
-                content: c
+                content: c,
+                done: false
             }
             SetTodos([...todos, newNote])
+            SetTitle('')
+            SetContent('')
+            
         } else {
             console.log('Greska input');
         }
+       
 
     }
 
   return (
     <div className='form'>
-        <input onChange={(e)=>{saveTitle(e)}} placeholder='Enter title'/>
-        <input onChange={(e)=>{saveContent(e)}} placeholder='Enter content'/>
+        <input value={title} onChange={(e)=>{saveTitle(e)}} placeholder='Enter title'/>
+        <input value={content} onChange={(e)=>{saveContent(e)}} placeholder='Enter content'/>
         <button onClick={addNewNote}>Add new note</button>
         </div>
   )

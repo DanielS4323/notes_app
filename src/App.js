@@ -8,17 +8,20 @@ let notes = [
   {
     id: 1,
     title: 'Buy Milk',
-    content: 'buy 2L'
+    content: 'buy 2L',
+    done: false
   },
   {
     id: 2,
     title: 'Buy potatoes',
-    content: 'buy 2kg'
+    content: 'buy 2kg',
+    done: false
   },
   {
     id: 3,
     title: 'Buy apples',
-    content: 'buy 1.5kg'
+    content: 'buy 1.5kg',
+    done: false
   }
 ]
 
@@ -33,7 +36,7 @@ function App() {
     <div className="App">
       <h1>Notes App</h1>
       <Form SetTitle={SetTitle} title={title} content={content} SetContent={SetContent} todos={todos} SetTodos={SetTodos}/>
-      <Notes todos={todos}/>
+      <Notes todos={todos} SetTodos={SetTodos}/>
     </div>
   );
 }

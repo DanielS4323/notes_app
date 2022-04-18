@@ -8,6 +8,11 @@ $colors: $note-color-1,$note-color-2,$note-color-3,$note-color-4,$note-color-5;
 $repeat: 10;
 
 
+// .done {
+//     h3,h4 {
+//         text-decoration: line-through 2.5px;
+//     }
+// }
 
 .note {
     width: 16em;
@@ -16,6 +21,8 @@ $repeat: 10;
     box-shadow: 3px 5px 10px .5px black;
     border-radius: 5px;
     margin: 1em;
+    position: relative;
+
 
     #pin {
         display: block;
@@ -32,4 +39,16 @@ $repeat: 10;
         padding-top: 2em;
         text-align: center;
     }
+
+    .p-done {
+       font-size: 200px;
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 23%;
+        opacity: .75;
+        
+        
+    }
+    
 }
