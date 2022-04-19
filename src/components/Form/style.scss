@@ -1,3 +1,5 @@
+@import '../Note/style.scss';
+
 .form {
     position: fixed;
     top: 13%;
@@ -6,6 +8,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 1000;
+    background-color: $note-color-5;
+    border: 1px solid black;
 
     input {
         margin: .5em;
@@ -13,6 +18,7 @@
         font-size: 14px;
         border-radius: 5px;
         border: none;
+        background-color: lightgray;
 
 
         &::placeholder{
@@ -20,6 +26,7 @@
             font-size: 18px;
             text-align: left;
             letter-spacing: .5px;
+            color: black;
         }
     }
     button {
