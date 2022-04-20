@@ -7,6 +7,10 @@ function Form({SetTitle, title, content, SetContent, todos, SetTodos}) {
     const saveTitle = (e) => SetTitle(e.target.value)
     const saveContent = (e) => SetContent(e.target.value)
 
+    const colors = ["#ff7eb9", " #ff65a3", "#7afcff", "#feff9c", "#fff740"];
+    const getRandom = Math.floor(Math.random() * colors.length);
+    const randomColor = colors[getRandom]
+
     const addNewNote = () => {
         let t = title.trim()
         let c = content.trim();
@@ -16,11 +20,12 @@ function Form({SetTitle, title, content, SetContent, todos, SetTodos}) {
                 id: todos.length + 1,
                 title: t,
                 content: c,
-                done: false
+                done: false,
+                color: randomColor
             }
             SetTodos([...todos, newNote])
-            SetTitle('')
-            SetContent('')
+            // SetTitle('')
+            // SetContent('')
             
         } else {
             console.log('Greska input');

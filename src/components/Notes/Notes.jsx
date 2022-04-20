@@ -2,11 +2,11 @@ import React from "react";
 import Note from "../Note/Note";
 import "./style.scss";
 
-function Notes({ todos, SetTodos }) {
+function Notes(props) {
   return (
     <div className="notes">
-      {todos.map((todo) => (
-        <Note key={todo.id} todo={todo} SetTodos={SetTodos}/>
+      {props.todos.map((todo) => (
+        <Note key={todo.id} todo={todo} SetTodos={props.SetTodos}/>
       ))}
     </div>
   );

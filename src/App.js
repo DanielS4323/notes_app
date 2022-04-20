@@ -1,5 +1,5 @@
 import Notes from './components/Notes/Notes'
-
+import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import { useState } from 'react';
 
@@ -9,19 +9,22 @@ let notes = [
     id: 1,
     title: 'Buy Milk',
     content: 'buy 2L',
-    done: false
+    done: false,
+    color: '#ff7eb9'
   },
   {
     id: 2,
     title: 'Buy potatoes',
     content: 'buy 2kg',
-    done: false
+    done: true,
+    color: '#7afcff'
   },
   {
     id: 3,
     title: 'Buy apples',
     content: 'buy 1.5kg',
-    done: false
+    done: false,
+    color: '#fff740'
   }
 ]
 
@@ -34,9 +37,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Notes App</h1>
-      <Form SetTitle={SetTitle} title={title} content={content} SetContent={SetContent} todos={todos} SetTodos={SetTodos}/>
-      <Notes todos={todos} SetTodos={SetTodos}/>
+      <Header/>
+
+      <Form 
+      SetTitle={SetTitle} 
+      title={title} 
+      content={content} 
+      SetContent={SetContent} 
+      todos={todos} 
+      SetTodos={SetTodos}/>
+
+      <Notes 
+      todos={todos} 
+      SetTodos={SetTodos}/>
     </div>
   );
 }
