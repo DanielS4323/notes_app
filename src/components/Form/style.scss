@@ -11,9 +11,10 @@
     z-index: 1000;
     background-color: $note-color-5;
     border: 1px solid black;
+    
 
     input {
-        margin: .5em;
+        margin: .5em 1em;
         padding: .5em;
         font-size: 14px;
         border-radius: 5px;
@@ -22,20 +23,20 @@
 
 
         &::placeholder{
-            padding: .3em;
             font-size: 18px;
-            text-align: left;
+            text-align: center;
             letter-spacing: .5px;
             color: black;
         }
     }
     button {
+        letter-spacing: 1px;
         border-radius: 8px;
-        border: none;
+        border: 1px soild black;
         text-align: center;
-        padding: .4em .3em;
+        padding: 0em 1em;
         width: 7em;
-        
+        margin: .5em 1em;
     }
 
 }

@@ -38,7 +38,7 @@ function Form({SetTitle, title, content, SetContent, todos, SetTodos}) {
     <div className='form'>
         <input value={title} onChange={(e)=>{saveTitle(e)}} placeholder='Enter title'/>
         <input value={content} onChange={(e)=>{saveContent(e)}} placeholder='Enter content'/>
-        <button onClick={addNewNote}>Add new note</button>
+        <button onClick={addNewNote}>Add note</button>
         </div>
   )
 }
